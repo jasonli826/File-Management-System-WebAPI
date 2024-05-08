@@ -6287,11 +6287,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-Web-API-\\FileDetailAPI\\FileDetailAPI.csproj",
+      "projectUniqueName": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\FileDetailAPI.csproj",
       "projectName": "FileDetailAPI",
-      "projectPath": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-Web-API-\\FileDetailAPI\\FileDetailAPI.csproj",
+      "projectPath": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\FileDetailAPI.csproj",
       "packagesPath": "C:\\Users\\LiLing\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-Web-API-\\FileDetailAPI\\obj\\",
+      "outputPath": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LiLing\\AppData\\Roaming\\NuGet\\NuGet.Config",

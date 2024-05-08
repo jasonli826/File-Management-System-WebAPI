@@ -85,12 +85,12 @@ namespace FileDetailAPI.Repository
             DateTime? effectiveDateEnd = null;
             try
             {
-                if (string.IsNullOrEmpty(user_dto.EffectiveDateEnd))
+                if (roleIds.Count==0)
                 {
 
                     userList = await (from user in _appDBContext.User_tbl
                                       join role in _appDBContext.UserRole on user.UserId equals role.UserId
-                                      where ((user.UserId.ToUpper() ?? "").Contains(userId.ToUpper()) && (user.UserName.ToUpper() ?? "").Contains(userName.ToUpper()) && (user.Remarks.ToUpper() ?? "").Contains(remark.ToUpper())&& user.Effective_from >= effectiveDateFrom) || roleIds.Contains(role.RoleId) 
+                                      where ((user.UserId.ToUpper() ?? "").Contains(userId.ToUpper()) &&(user.UserName.ToUpper() ?? "").Contains(userName.ToUpper()) && (user.Remarks.ToUpper() ?? "").Contains(remark.ToUpper()))
                                       select new User_DTO
                                       {
                                           UserId = user.UserId,
@@ -112,11 +112,9 @@ namespace FileDetailAPI.Repository
                 }
                 else
                 {
-                    effectiveDateEnd = Convert.ToDateTime(user_dto.EffectiveDateEnd);
                     userList = await (from user in _appDBContext.User_tbl
                                       join role in _appDBContext.UserRole on user.UserId equals role.UserId
-                                      where user.UserId.Contains(userId) || user.UserName.Contains(userName) || user.Remarks.Contains(remark) || roleIds.Contains(role.RoleId) || user.Effective_from >= effectiveDateFrom
-                                      ||user.Effective_to<= effectiveDateEnd
+                                      where ((user.UserId.ToUpper() ?? "").Contains(userId.ToUpper()) && (user.UserName.ToUpper() ?? "").Contains(userName.ToUpper()) && (user.Remarks.ToUpper() ?? "").Contains(remark.ToUpper())) && (roleIds).Contains(role.RoleId)
                                       select new User_DTO
                                       {
                                           UserId = user.UserId,

@@ -10,10 +10,6 @@ namespace FileDetailAPI.Repository
 
         }
 
-        public DbSet<Department> Departments { get; set; }
-        public DbSet<Employee> Employee { get; set; }
-        public DbSet<EmployeeAngular> EmployeeAngular { get; set; }
-
         public DbSet<FileDetails> FileDetails { get; set; }
 
         public DbSet<Role> Role { get; set; }

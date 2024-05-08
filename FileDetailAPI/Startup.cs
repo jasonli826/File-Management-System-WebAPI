@@ -29,10 +29,6 @@ namespace FileDetailAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddScoped<IDepartmentRepository, DepartmentRepository>();
-            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-            services.AddScoped<IEmployeeAngularRepository, EmployeeAngularRepository>();
             services.AddScoped<IFileDetailsRepository, FileDetailsRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IMenuItemsRepository, MenuItemsRepository>();
@@ -105,12 +101,12 @@ namespace FileDetailAPI
                 c.DocExpansion(DocExpansion.List);
             });
 
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-                    Path.Combine(Directory.GetCurrentDirectory(), "Photos")),
-                RequestPath = "/Photos"
-            });
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(
+            //        Path.Combine(Directory.GetCurrentDirectory(), "Photos")),
+            //    RequestPath = "/Photos"
+            //});
 
         }
     }

@@ -21,7 +21,7 @@ FROM base AS final
 WORKDIR /app
 RUN mkdir -p /app/Photos
 COPY --from=publish /app/publish .
-COPY ["Photos", "/app/Photos"]
+#COPY ["Photos", "/app/Photos"]
 ENTRYPOINT ["dotnet", "FileDetailAPI.dll"]
 
 ENV FileDetailAppCon="Data Source=Localhost;database=FileVersionManagement;uid=sa;password=P@ssw0rd;"

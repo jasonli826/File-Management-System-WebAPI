@@ -37,7 +37,7 @@ namespace FileDetailAPI.Repository
                                           join role in _appDBContext.UserRole on user.UserId equals role.UserId
                                           join roleControl in _appDBContext.RoleControl on role.RoleId equals roleControl.RoleId
                                           join menu in _appDBContext.MenuItems on roleControl.MenuId equals menu.MenuID
-                                          where user.UserId.ToUpper() == userId.ToUpper() && user.Password == encryption
+                                          where user.Status.ToUpper()=="ACTIVE" && user.UserId.ToUpper() == userId.ToUpper() && user.Password == encryption
                                           select new
                                           {
                                               userId = user.UserId,

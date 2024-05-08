@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qTRUKye9j0+aiVRwBSyXrqrLptd4+0CPEABwTzP36g41i9lKiAGZZEgGvNoghaE2HtcOvMYOG5vNMqRduim10g==",
+  "dgSpecHash": "dgTvy1edCIyYN2FTzouOGrrWCJ6P8kPrMdSSwneO8JZa8tBvor9ScGWQTxmT3BjjnkmE5ZVZFb07j7O2yRz72w==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-Web-API-\\FileDetailAPI\\FileDetailAPI.csproj",
+  "projectFilePath": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\FileDetailAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LiLing\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\LiLing\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.9\\microsoft.aspnetcore.jsonpatch.3.1.9.nupkg.sha512",
