@@ -35,7 +35,8 @@ namespace FileDetailAPI
             services.AddScoped<IRoleControlRepository, RoleControlRepository>();
             services.AddScoped<IUserRepository, UserRepository>(); 
             services.AddScoped<ILoginRepository, LoginRepository>();
-            var connectionString = Environment.GetEnvironmentVariable("FileDetailAppCon");
+            services.AddScoped<IProjectRepository, ProjectRepository>();
+            var connectionString = Configuration.GetConnectionString("FileDetailAppCon");
             services.AddDbContext<APIDbContext>(options => options.UseSqlServer(connectionString));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.Configure<FormOptions>(options =>
@@ -62,7 +63,13 @@ namespace FileDetailAPI
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod()
                  .AllowAnyHeader());
             });
-
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("AllowOrigin",
+            //        builder => builder.WithOrigins("http://localhost")
+            //                          .AllowAnyMethod()
+            //                          .AllowAnyHeader());
+            //});
             //JSON Serializer
             services.AddControllersWithViews().AddNewtonsoftJson(options =>
             options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore)
@@ -76,7 +83,7 @@ namespace FileDetailAPI
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+              //  app.UseDeveloperExceptionPage();
             }
           
 

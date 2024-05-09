@@ -32,7 +32,7 @@ namespace FileDetailAPI.Repository
 
                 if (_appDBContext.User_tbl.Where(x => x.UserId == userId && x.Password == encryption).Count() > 0)
                 {
-
+                    
                     var tempList = await (from user in _appDBContext.User_tbl
                                           join role in _appDBContext.UserRole on user.UserId equals role.UserId
                                           join roleControl in _appDBContext.RoleControl on role.RoleId equals roleControl.RoleId
@@ -45,15 +45,21 @@ namespace FileDetailAPI.Repository
                                               menudesc = menu.Menu_Description
 
                                           }).ToListAsync();
-                    userInfo = new UserInfo(userId, new List<UserInfo.Menu>());
-                    foreach (var item in tempList)
+                    if (tempList.Count() > 0)
                     {
+                        userInfo = new UserInfo(userId, new List<UserInfo.Menu>());
+                        foreach (var item in tempList)
+                        {
 
-                        userInfo.accessList.Add(new UserInfo.Menu(item.menuId, item.menudesc));
+                            userInfo.accessList.Add(new UserInfo.Menu(item.menuId, item.menudesc));
+
+                        }
 
                     }
-
-
+                    else
+                    {
+                        userInfo = new UserInfo("Inactive User", new List<UserInfo.Menu>());
+                    }
                 }
                 else
                 {

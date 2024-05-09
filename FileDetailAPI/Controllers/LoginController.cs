@@ -28,6 +28,11 @@ namespace FileDetailAPI.Controllers
                 {
                     return new JsonResult("User Name or Password is invalid");
                 }
+                if (userInfo.userId == "Inactive User")
+                {
+                    return new JsonResult("This User Is Inactive");
+                }
+
                 return Ok(userInfo);
             }
             catch (Exception ex)

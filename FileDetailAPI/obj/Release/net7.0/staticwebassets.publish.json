@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "jZAiKlsTyA8o+qUP9FnTvp/fYhit25T6k0ona4kLeeo=",
-  "Source": "WebAPI",
-  "BasePath": "_content/WebAPI",
+  "Hash": "YcpaZj/UvlQr2Yy+sbPY6qM9fFcatNUwpDtacDLQ8v8=",
+  "Source": "FileDetailAPI",
+  "BasePath": "_content/FileDetailAPI",
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],

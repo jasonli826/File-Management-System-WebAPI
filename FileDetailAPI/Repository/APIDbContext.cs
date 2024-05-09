@@ -22,5 +22,7 @@ namespace FileDetailAPI.Repository
         public DbSet<User_tbl> User_tbl { get; set; }
         public DbSet<UserRole> UserRole { get; set; }
 
+        public DbSet<Project> Project { get; set; }
+
     }
 }
