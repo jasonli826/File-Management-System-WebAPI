@@ -30,14 +30,26 @@ namespace FileDetailAPI.Repository
             {
                 encryption = EncryptString(key, password);
 
-                if (_appDBContext.User_tbl.Where(x => x.UserId == userId && x.Password == encryption).Count() > 0)
+                if (_appDBContext.User_tbl.Where(x => x.UserId == userId && x.Password == encryption ).Count() > 0)
                 {
-                    
+                    var singleuser = await _appDBContext.User_tbl.Where(x => x.UserId == userId && x.Password == encryption).FirstOrDefaultAsync();
+                    if (singleuser != null)
+                    {
+                        if (singleuser.Status.ToUpper() == "INACTIVE")
+                        {
+                            userInfo = new UserInfo("Inactive User", new List<UserInfo.Menu>());
+                            return userInfo;
+                        }
+
+
+
+
+                    }
                     var tempList = await (from user in _appDBContext.User_tbl
                                           join role in _appDBContext.UserRole on user.UserId equals role.UserId
                                           join roleControl in _appDBContext.RoleControl on role.RoleId equals roleControl.RoleId
                                           join menu in _appDBContext.MenuItems on roleControl.MenuId equals menu.MenuID
-                                          where user.Status.ToUpper()=="ACTIVE" && user.UserId.ToUpper() == userId.ToUpper() && user.Password == encryption
+                                          where user.Status.ToUpper() == "ACTIVE" && user.UserId.ToUpper() == userId.ToUpper() && user.Password == encryption
                                           select new
                                           {
                                               userId = user.UserId,
@@ -58,7 +70,7 @@ namespace FileDetailAPI.Repository
                     }
                     else
                     {
-                        userInfo = new UserInfo("Inactive User", new List<UserInfo.Menu>());
+                        userInfo = new UserInfo(userId, new List<UserInfo.Menu>());
                     }
                 }
                 else
@@ -67,11 +79,12 @@ namespace FileDetailAPI.Repository
 
 
                 }
+                
             }
             catch (Exception ex)
             {
                 throw ex;
-            
+
             }
             return userInfo;
 

@@ -19,6 +19,7 @@ namespace FileDetailAPI.Repository
     public interface IFileDetailsRepository
     {
         Task<IEnumerable<FileDetails_DTO>> GetFileDetails();
+        Task<IEnumerable<FileDetails_DTO>> SearchFileDetails(string fileType,string projectName);
         Task<FileDetails> CreateNewFile(IFormFile file,UploadData uploadData);
         Task<FileDetails> DownloadFileById(int Id);
         bool DeleteFile(int ID);
@@ -50,7 +51,8 @@ namespace FileDetailAPI.Repository
                                           UploadBy = fd.UploadBy,
                                           ReleaseDate = fd.ReleaseDate.Date,
                                           ReleaseNotes = fd.ReleaseNotes,
-                                          UploadDateTime = fd.UploadDateTime
+                                          UploadDateTime = fd.UploadDateTime,
+                                          ProjectName = fd.Project_Name
 
                                       }).AsQueryable().OrderByDescending(x => x.UploadDateTime).ToListAsync();
             }
@@ -75,9 +77,10 @@ namespace FileDetailAPI.Repository
                     FileType = uploadData.uploadType,
                     UploadBy = uploadData.releaseBy,
                     UploadDateTime = DateTime.Now,
+                    Project_Name = uploadData.projectName,
                     FileExtension = ".ZIP",
                     FileSize = (Math.Round((double)file.Length / 1048576, 2)).ToString() + " M"
-
+                   
                 };
 
                 using (var stream = new MemoryStream())
@@ -168,5 +171,56 @@ namespace FileDetailAPI.Repository
                 throw ex;
             }
         }
+
+        public async Task<IEnumerable<FileDetails_DTO>> SearchFileDetails(string fileType, string projectName)
+        {
+            List<FileDetails_DTO> searchFileList = null;
+            try
+            {
+                if (string.IsNullOrEmpty(fileType) || string.IsNullOrEmpty(projectName))
+                {
+                    searchFileList = await (from fd in _appDBContext.FileDetails
+                                            select new FileDetails_DTO
+                                            {
+                                                Id = fd.Id,
+                                                FileName = fd.FileName,
+                                                FileSize = fd.FileSize,
+                                                FileType = fd.FileType,
+                                                VersionNo = fd.VersionNo,
+                                                UploadBy = fd.UploadBy,
+                                                ReleaseDate = fd.ReleaseDate.Date,
+                                                ReleaseNotes = fd.ReleaseNotes,
+                                                UploadDateTime = fd.UploadDateTime,
+                                                ProjectName = fd.Project_Name
+
+                                            }).Where(x => (x.FileType ?? "").Contains(fileType) || (x.ProjectName ?? "").Contains(projectName)).AsQueryable().OrderByDescending(x => x.UploadDateTime).ToListAsync();
+
+                }
+                else
+                {
+                    searchFileList = await (from fd in _appDBContext.FileDetails
+                                            select new FileDetails_DTO
+                                            {
+                                                Id = fd.Id,
+                                                FileName = fd.FileName,
+                                                FileSize = fd.FileSize,
+                                                FileType = fd.FileType,
+                                                VersionNo = fd.VersionNo,
+                                                UploadBy = fd.UploadBy,
+                                                ReleaseDate = fd.ReleaseDate.Date,
+                                                ReleaseNotes = fd.ReleaseNotes,
+                                                UploadDateTime = fd.UploadDateTime,
+                                                ProjectName = fd.Project_Name
+
+                                            }).Where(x => (x.FileType ?? "").Contains(fileType) && (x.ProjectName ?? "").Contains(projectName)).AsQueryable().OrderByDescending(x => x.UploadDateTime).ToListAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return searchFileList;
+        }
     }
+    
 }

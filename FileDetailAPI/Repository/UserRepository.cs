@@ -56,9 +56,8 @@ namespace FileDetailAPI.Repository
                                       Created_Date = user.Created_Date,
                                       Update_by = user.Updated_by,
                                       Update_Date = user.Updated_Date,
-                                      Remark = user.Remarks,
-                                      EffectiveDateFrom =  user.Effective_from.Value.Date.ToString(),
-                                      EffectiveDateEnd = user.Effective_to.Value.Date.ToString()
+                                      Remark = user.Remarks
+                                     
 
                                   }).ToListAsync();
 
@@ -81,8 +80,6 @@ namespace FileDetailAPI.Repository
             string userName = user_dto.UserName;
             string remark = user_dto.Remark;
             List<int> roleIds = user_dto.RoleIds;
-            DateTime? effectiveDateFrom = Convert.ToDateTime(user_dto.EffectiveDateFrom);
-            DateTime? effectiveDateEnd = null;
             try
             {
                 if (roleIds.Count==0)
@@ -102,9 +99,8 @@ namespace FileDetailAPI.Repository
                                           Created_Date = user.Created_Date,
                                           Update_by = user.Updated_by,
                                           Update_Date = user.Updated_Date,
-                                          Remark = user.Remarks,
-                                          EffectiveDateFrom = user.Effective_from.Value.Date.ToString(),
-                                          EffectiveDateEnd = user.Effective_to.Value.Date.ToString()
+                                          Remark = user.Remarks
+                                       
 
                                       }).ToListAsync();
 
@@ -127,8 +123,7 @@ namespace FileDetailAPI.Repository
                                           Update_by = user.Updated_by,
                                           Update_Date = user.Updated_Date,
                                           Remark = user.Remarks,
-                                          EffectiveDateFrom = user.Effective_from.Value.Date.ToString(),
-                                          EffectiveDateEnd = user.Effective_to.Value.Date.ToString()
+                                      
 
                                       }).ToListAsync();
 
@@ -163,8 +158,7 @@ namespace FileDetailAPI.Repository
                 user.UserName = user_dto.UserName;
                 user.Password = encrptionStr;
                 user.Status = (user_dto.isActive == true ? "Active" : "Inactive");
-                user.Effective_from = Convert.ToDateTime(user_dto.EffectiveDateFrom);
-                user.Effective_to = string.IsNullOrEmpty(user_dto.EffectiveDateEnd) ? null : Convert.ToDateTime(user_dto.EffectiveDateEnd);
+            
                 user.Remarks = user_dto.Remark;
                 user.Created_by = user_dto.Created_by;
                 user.Created_Date = DateTime.Now;
@@ -202,12 +196,14 @@ namespace FileDetailAPI.Repository
             try
             {
                 user = await _appDBContext.User_tbl.Where(x => x.UserId == user_dto.UserId).FirstOrDefaultAsync();
-                encrptionStr = EncryptString(key, user_dto.Password);
                 user.UserName = user_dto.UserName;
-                user.Password = encrptionStr;
+                if (!string.IsNullOrEmpty(user_dto.Password))
+                {
+                    encrptionStr = EncryptString(key, user_dto.Password);
+
+                    user.Password = encrptionStr;
+                }
                 user.Status = (user_dto.isActive == true ? "Active" : "Inactive");
-                user.Effective_from = Convert.ToDateTime(user_dto.EffectiveDateFrom);
-                user.Effective_to = Convert.ToDateTime(user_dto.EffectiveDateEnd);
                 user.Remarks = user_dto.Remark;
                 user.Updated_by = user_dto.Update_by;
                 user.Updated_Date = DateTime.Now;

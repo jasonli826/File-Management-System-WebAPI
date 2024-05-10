@@ -36,8 +36,6 @@ namespace FileDetailAPI.Models
 
         public string Remarks { get; set; }
          
-        public DateTime? Effective_from { get; set; }
 
-        public DateTime? Effective_to { get; set; }
     }
 }

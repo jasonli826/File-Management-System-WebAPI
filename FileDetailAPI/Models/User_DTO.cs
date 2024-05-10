@@ -23,10 +23,6 @@ namespace FileDetailAPI.Models
 
         public List<int> RoleIds { get; set; }
 
-        public string? EffectiveDateFrom { get; set; }
-
-
-        public string? EffectiveDateEnd { get; set; }
 
         public string Remark { get; set; }
 

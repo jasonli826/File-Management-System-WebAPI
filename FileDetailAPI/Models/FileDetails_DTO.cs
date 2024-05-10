@@ -29,6 +29,8 @@ namespace FileDetailAPI.Models
 
         [Required]
         public DateTime UploadDateTime { get; set; }
+        [Required]
+        public string ProjectName { get; set; }
 
     }
 }

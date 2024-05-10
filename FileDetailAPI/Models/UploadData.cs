@@ -11,5 +11,7 @@ namespace FileDetailAPI.Models
         public string releaseContent { get; set; }
 
         public string uploadBy { get; set; }
+
+        public string projectName { get; set; }
     }
 }

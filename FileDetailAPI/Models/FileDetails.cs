@@ -32,6 +32,7 @@ namespace FileDetailAPI.Models
 
         public string FileExtension { get; set; }
         public DateTime UploadDateTime { get; set; }
+        public string Project_Name { get; set; }
         public override string ToString()
         {
             return FileName;

@@ -29,11 +29,18 @@ namespace FileDetailAPI.Controllers
         {
             return Ok(await _fileDetail.GetFileDetails());
         }
+        [HttpGet]
+        [Route("SearchFileList")]
+        public async Task<IActionResult> Get(string fileType,string projectName)
+        {
+            return Ok(await _fileDetail.SearchFileDetails(fileType,projectName));
+        }
         [HttpGet("DownloadFile")]
         [RequestSizeLimit(1073741824)]
         public async Task<ActionResult> DownloadFile(int id)
         {
             if (id < 1)
+
             {
                 return BadRequest();
             }
@@ -52,7 +59,7 @@ namespace FileDetailAPI.Controllers
         [HttpPost]
         [Route("AddNewFile")]
         [RequestSizeLimit(2147483648)]
-        public async Task<IActionResult> Post( IFormFile fileDetails,string version,string uploadType,string releaseBy,DateTime releaseDate,string releaseContent,string uploadBy)
+        public async Task<IActionResult> Post( IFormFile fileDetails,string version,string uploadType,string releaseBy,DateTime releaseDate,string releaseContent,string uploadBy,string projectName)
         {
             UploadData uploadData = new UploadData();
             uploadData.uploadType = uploadType;
@@ -61,6 +68,7 @@ namespace FileDetailAPI.Controllers
             uploadData.dateOfReleasse = releaseDate;
             uploadData.releaseContent = releaseContent;
             uploadData.uploadBy = uploadBy;
+            uploadData.projectName = projectName;
             string extension = string.Empty;
             if (fileDetails == null)
             {
