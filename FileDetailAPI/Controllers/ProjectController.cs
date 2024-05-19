@@ -2,6 +2,7 @@
 using FileDetailAPI.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using System;
 using System.Threading.Tasks;
 
@@ -37,6 +38,11 @@ namespace FileDetailAPI.Controllers
         {
             try
             {
+                if (string.IsNullOrEmpty(project_dto.Project_Name))
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest, "Project Name is duplicated");
+                }
+
                 var result = await _project.InsertProject(project_dto);
                 if (result.Project_ID == 0)
                 {

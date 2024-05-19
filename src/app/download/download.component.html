@@ -1,0 +1,80 @@
+<!-- HTML -->
+<div class="container">
+  <div class="row">
+    <div class="left-controls">
+      <label class="label">File Type:</label>
+      <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" name="uploadtype" value="GUI" [(ngModel)]="searchData.fileType" (change)="TypeChanged($event)">
+          <span style="margin-left: 10px; font-weight: bold;">GUI</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="uploadtype" value="Robotics" [(ngModel)]="searchData.fileType" (change)="TypeChanged($event)">
+          <span style="margin-left: 10px; font-weight: bold;">Robotics</span>
+        </label>
+      </div>
+    </div>
+    
+    <!-- Project Name Dropdown -->
+    <div class="center-controls">
+      <label for="searchInput" style="font-weight: bold;">Project Name:</label>
+      <div class="dropdown">
+      <input id="searchInput" type="text" class="dropdown-input" placeholder="Search..." (input)="filterItems($event)" style="width: 400px;" [(ngModel)]="searchData.projectName">
+      <ul class="dropdown-list" *ngIf="dropdownVisible">
+          <li *ngFor="let item of filteredItems" (click)="selectItem(item);" [value]="item.Project_ID">{{ item.Project_Name }}</li>
+      </ul>
+      </div>
+      </div>
+    </div>
+  
+</div>
+
+
+<table class="table table-striped" styly="width:100%">
+  <thead>
+    <tr>
+      <th style="white-space: nowrap;">Type</th>
+      <th style="white-space: nowrap;">Project Name</th>
+      <th style="white-space: nowrap;">File Name</th>
+      <th style="white-space: nowrap;">File Size</th>
+      <th style="white-space: nowrap;">Version No</th>
+      <th style="white-space: nowrap;">Release Date</th>
+      <th style="white-space: nowrap;">Release Notes</th>
+      <th style="white-space: nowrap;">Upload By</th>
+      <th style="white-space: nowrap;">Upload Date</th>
+      <th style="white-space: nowrap;"></th>
+      <th style="white-space: nowrap;"></th>
+    </tr> 
+  </thead>
+  <tbody>
+    <tr *ngFor="let dataItem of FileList">
+      <td style="white-space: nowrap;">{{dataItem.FileType}}</td>
+      <td style="white-space: nowrap;">{{dataItem.ProjectName}}</td>
+      <td style="white-space: nowrap;">{{dataItem.FileName}}</td>
+      <td style="white-space: nowrap;">{{dataItem.FileSize}}</td>
+      <td style="white-space: nowrap;">{{dataItem.VersionNo}}</td>
+      <td style="white-space: nowrap;">{{dataItem.ReleaseDate | date:'dd/MM/yyyy'}}</td>
+      <td>{{dataItem.ReleaseNotes}}</td>
+      <td style="white-space: nowrap;">{{dataItem.UploadBy}}</td>
+      <td style="white-space: nowrap;">{{dataItem.UploadDateTime | date:'dd/MM/YYYY HH:mm:ss'}}</td>
+      <td>
+        <button type="button" class="btn btn-light mr-1" 
+          (click)="downloadClick(dataItem)" data-backdrop="static" data-keyboard="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+          </svg>
+        </button>
+        </td>
+        <td>
+        <button type="button" class="btn btn-light mr-1" (click)="deleteClick(dataItem)" [hidden]="!showDeleteButton">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z" />
+          </svg>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

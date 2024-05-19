@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
@@ -37,7 +37,7 @@ namespace FileDetailAPI.Controllers
         }
         [HttpGet("DownloadFile")]
         [RequestSizeLimit(1073741824)]
-        public async Task<ActionResult> DownloadFile(int id)
+        public async Task<ActionResult> DownloadFile(string userId,int id)
         {
             if (id < 1)
 
@@ -47,7 +47,7 @@ namespace FileDetailAPI.Controllers
 
             try
             {
-               var result = await _fileDetail.DownloadFileById(id);
+               var result = await _fileDetail.DownloadFileById(userId,id);
                return File(result.FileData, "application/x-zip", result.FileName);
             }
             catch (Exception ex)

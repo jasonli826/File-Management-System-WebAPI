@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <label class="label">Role:</label>
+        <select class="dropdown" [(ngModel)]="selectedRoleId" (change)="onChange()">
+            <option value="0">--Select--</option>
+            <option *ngFor="let role of RoleList" [ngValue]="role.RoleID">{{ role.Role_Name }}</option>
+        </select>
+        <button routerLink="../addeditrole"  name="rolebutton" class="button-19" style="margin-left: 10px;width:150px;height:40px">Create/Edit Role</button>
+    </div>
+    
+    <div class="row">
+        <label class="label">Job Description:</label>
+        <textarea class="textarea" [(ngModel)]="RoleDesc"></textarea>
+    </div>
+    <div class="row" style="margin-top: 10px;">
+    <div class="col-md-2">
+      <label class="label" style="vertical-align: top; margin-top: 7px;">Access Control:</label>
+    </div>
+    <div class="col-md-4">
+      <!-- <ul style="list-style-type: none; padding-left: 0;">
+        <li>
+          <input id="viewupload" name="viewupload" type="checkbox" [(ngModel)]="viewupload">
+          <span style="margin-left: 5px;">Upload File</span>
+        </li>
+        <li>
+          <input id="viewusermanagement" name="viewusermanagement" type="checkbox" [(ngModel)]="viewusermanagement">
+          <span style="margin-left: 5px;">User Management</span>
+        </li>
+        <li>
+          <input id="viewuserrole" name="viewuserrole" type="checkbox" [(ngModel)]="viewuserrole">
+          <span style="margin-left: 5px;">User Role</span>
+        </li>
+      </ul> -->
+      <div>
+        
+        <ul>
+          <input type="checkbox" id="selectAllCheckbox" (change)="selectAllCheckbox($event)"><span style="margin-left: 5px;">Select All</span>
+          <li *ngFor="let menuItem of MenuItemList">
+            <input type="checkbox" id="{{menuItem.MenuID}}" name="{{menuItem.MenuID}}" [(ngModel)]="menuItem.checked" (click)="select($event)">
+            <span style="margin-left: 5px;">{{menuItem.Menu_Description}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  <div class="row" style="margin-top: 10px;">
+    <div class="col-md-2"></div><div class="col-md-4"><button name="savebutton" class="button-19" style="width:80px;height:40px" (click)="SaveAccessControl($event)">Save</button></div>
+  </div>
+</div>

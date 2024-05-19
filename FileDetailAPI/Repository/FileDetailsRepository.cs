@@ -1,4 +1,4 @@
-﻿using FileDetailAPI.Models;
+using FileDetailAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.VisualBasic.FileIO;
 using System;
@@ -21,7 +21,7 @@ namespace FileDetailAPI.Repository
         Task<IEnumerable<FileDetails_DTO>> GetFileDetails();
         Task<IEnumerable<FileDetails_DTO>> SearchFileDetails(string fileType,string projectName);
         Task<FileDetails> CreateNewFile(IFormFile file,UploadData uploadData);
-        Task<FileDetails> DownloadFileById(int Id);
+        Task<FileDetails> DownloadFileById(string userId,int Id);
         bool DeleteFile(int ID);
     }
     public class FileDetailsRepository : IFileDetailsRepository
@@ -88,6 +88,18 @@ namespace FileDetailAPI.Repository
                     file.CopyTo(stream);
                     fileDetails.FileData = CompressData(stream.ToArray());
                 }
+                Audit_Log auditLog = new Audit_Log();
+                auditLog.UserId = uploadData.releaseBy;
+                auditLog.ActionType = 2;
+                auditLog.FileName = file.FileName;
+                auditLog.LogMessage = "User:" + uploadData.releaseBy + " has uploaded the file " + file.FileName + " on " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+                auditLog.Created_by = uploadData.releaseBy;
+                auditLog.Created_Date = DateTime.Now;
+                auditLog.Updated_by = uploadData.releaseBy;
+                auditLog.Updated_Date = DateTime.Now;
+                auditLog.Project_Name = uploadData.projectName;
+                await _appDBContext.Audit_Log.AddAsync(auditLog);
+                //_appDBContext.SaveChanges();
 
                 var result = _appDBContext.FileDetails.Add(fileDetails);
                 await _appDBContext.SaveChangesAsync();
@@ -99,7 +111,7 @@ namespace FileDetailAPI.Repository
             return fileDetails;
 
         }
-        public async Task<FileDetails> DownloadFileById(int Id)
+        public async Task<FileDetails> DownloadFileById(string userId,int Id)
         {
             FileDetails file = null;
             try
@@ -107,6 +119,18 @@ namespace FileDetailAPI.Repository
                 var result = _appDBContext.FileDetails.AsNoTracking().ToList().Where(x=>x.Id==Id).FirstOrDefault();
                 result.FileData = DecompressData(result.FileData);
                 file = result;
+                Audit_Log auditLog = new Audit_Log();
+                auditLog.UserId = userId;
+                auditLog.ActionType = 1;
+                auditLog.FileName = result.FileName;
+                auditLog.LogMessage = userId + " has downloaded the file " + result.FileName + " on " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture); ;
+                auditLog.Created_by = userId;
+                auditLog.Created_Date = DateTime.Now;
+                auditLog.Updated_by = userId;
+                auditLog.Updated_Date = DateTime.Now;
+                auditLog.Project_Name = result.Project_Name;
+                await _appDBContext.Audit_Log.AddAsync(auditLog);
+                await _appDBContext.SaveChangesAsync();
                 return file;
             }
             catch (Exception)

@@ -1,0 +1,517 @@
+.disabled-link {
+  pointer-events: none;
+  color: #999; /* Optional: Change the color to indicate that it's not clickable */
+}
+.top-right-image {
+    position: absolute;
+    top: 8px; /* Adjust top position as needed */
+    right: 0px; /* Adjust right position as needed */
+    max-width: 300px; /* Adjust maximum width as needed */
+    max-height: 300px; /* Adjust maximum height as needed */
+    width:200px;
+    height: 200px;
+}
+.top-Left-image {
+    position: absolute;
+    top:200px; /* Adjust top position as needed */
+    left: 0px; /* Adjust right position as needed */
+    width:20px;
+    height: 20px;
+}
+.container {
+    margin: 0 auto;
+    max-width: 100%; /* Adjust the maximum width as needed */
+    padding: 20px;
+}
+
+/* .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+} */
+.title-section {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-bottom: auto;
+}
+
+.line-container {
+    width: 100%;
+}
+
+.line {
+    border-top: 8px solid blue;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* CSS */
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+/* #menu {
+  background: blue;
+  color: #eee;
+  height: 40px;
+  border-bottom: 4px solid #eeeded
+}
+
+#menu ul,
+#menu li {
+  margin: 0 0;
+  padding: 0 0;
+  list-style: none
+}
+
+#menu ul {
+  height: 35px
+}
+
+#menu li {
+  float: left;
+  display: inline;
+  position: relative;
+  font: bold 18px Arial;
+  /* text-shadow: 0 -1px 0 #000;
+  border-right: 1px solid #444;
+  border-left: 1px solid #111;
+
+}
+
+#menu li:first-child {
+  border-left: none
+}
+
+#menu a {
+  display: block;
+  line-height: 35px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #eee;
+}
+
+#menu li:hover > a,
+#menu li a:hover {
+  background: green
+}
+
+#menu input {
+  display: none;
+  margin: 0 0;
+  padding: 0 0;
+  width: 80px;
+  height: 35px;
+  opacity: 0;
+  cursor: pointer
+}
+
+#menu label {
+  font: bold 30px Arial;
+  display: none;
+  width: 35px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center
+}
+
+#menu label span {
+  font-size: 12px;
+  position: absolute;
+  left: 40px
+}
+
+#menu ul.menus {
+  height: auto;
+  width: 180px;
+  background: green;
+  position: absolute;
+  z-index: 99;
+  display: none;
+  border: 0;
+}
+
+#menu ul.menus li {
+  display: block;
+  width: 100%;
+  font: 12px Arial;
+  text-transform: none;
+}
+
+#menu li:hover ul.menus {
+  display: block
+}
+
+#menu a.home {
+  background: #c00;
+}
+
+#menu a.prett {
+  padding: 0 27px 0 14px
+}
+
+#menu a.prett::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 6px 5px;
+  border-style: solid;
+  border-color: #eee transparent transparent transparent;
+  position: absolute;
+  top: 15px;
+  right: 9px
+}
+
+#menu ul.menus a:hover {
+  background: green;
+}
+#menu a.active {
+  background-color: green; /* Change this to the desired highlight color 
+  color: white; /* Change this to the desired text color 
+}
+#menu li.active > a {
+  background-color: green; /* Change this to the desired highlight color 
+  color: white; /* Change this to the desired text color 
+}
+#menu ul.menus .submenu {
+  display: none;
+  position: absolute;
+  left: 180px;
+  background: green;
+  top: 0;
+  width: 180px;
+} 
+
+#menu ul.menus .submenu li {
+  background: green;
+}
+
+#menu ul.menus .has-submenu:hover .submenu {
+  display: block;
+}*/
+.login-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#container1 {
+  position: relative;
+  width: 100%;   
+}
+
+#container1:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+#menu {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.15), 0 1px 3px rgba(0,0,0,.15);
+  background: blueviolet; 
+}
+
+#menu, #menu ul {
+  list-style: none;
+}
+
+#menu > li {
+  float: left;
+  position: relative;
+  border-right: 1px solid rgba(0,0,0,.1);
+  box-shadow: 1px 0 0 rgba(255,255,255,.25);
+  perspective: 1000px;
+  
+}
+
+#menu > li:first-child {
+  border-left: 1px solid rgba(255,255,255,.25);
+  box-shadow: -1px 0 0 rgba(0,0,0,.1), 1px 0 0 rgba(255,255,255,.25);
+}
+
+#menu a {
+  display: block;
+  position: relative;
+  z-index: 10;
+  padding: 13px 20px 13px 20px;
+  text-decoration: none;
+  color: rgba(75,75,75,1);
+  line-height: 1;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -.05em;
+  background: transparent;    
+  text-shadow: 0 1px 1px rgba(255,255,255,.9);
+  transition: all .25s ease-in-out;
+
+}
+#menu a .login-button {
+  display: block;
+  position: relative;
+  z-index: 10;
+  padding: 13px 20px 13px 20px;
+  text-decoration: none;
+  color: rgba(75,75,75,1);
+  line-height: 1;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -.05em;
+  background: transparent;    
+  text-shadow: 0 1px 1px rgba(255,255,255,.9);
+  transition: all .25s ease-in-out;
+
+}
+#menu > li:hover > a {
+  background: green;
+  color: rgba(0,223,252,1);
+  text-shadow: none;
+}
+
+#menu li ul  {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 200px;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: transparent;
+  overflow: hidden;
+  transform-origin: 50% 0%;
+}
+
+
+#menu li:hover ul {
+  
+  padding: 15px 0;
+  background: green;
+  opacity: 1;
+  visibility: visible;
+  box-shadow: 1px 1px 7px rgba(0,0,0,.5);
+  animation-name: swingdown;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+
+}
+
+@keyframes swingdown {
+  0% {
+    opacity: .99999;
+    transform: rotateX(90deg);
+  }
+
+  30% {     
+    transform: rotateX(-20deg) rotateY(5deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  65% {
+    transform: rotateX(20deg) rotateY(-3deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform: rotateX(0);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+#menu li li a {
+  padding-left: 15px;
+  font-weight: 400;
+  color: #ddd;
+  text-shadow: none;
+  border-top: dotted 1px transparent;
+  border-bottom: dotted 1px transparent;
+  transition: all .15s linear;
+}
+
+#menu li li a:hover {
+  color: rgba(0,223,252,1);
+  border-top: dotted 1px rgba(255,255,255,.15);
+  border-bottom: dotted 1px rgba(255,255,255,.15);
+  background: rgba(0,223,252,.02);
+}
+/* Adjust the styling for the logout button */
+#menu > li:last-child {
+  float: right;
+}
+
+#menu > li:last-child a {
+  padding: 13px 20px 13px 20px;
+}
+#menu .center-item {
+  position: relative;
+  text-align: center;
+}
+
+#menu .center-item .menus {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#menu .center-item ul {
+  text-align: left;
+}
+
+.container2 {
+  display: flex;
+  height: 100vh; /* Adjust as needed */
+}
+
+.sidebar {
+  width: 250px; /* Adjust as needed */
+  background-color: #f2f2f2;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px 20px;
+}
+
+.sidebar-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.sidebar-menu li a:hover {
+  background-color: #ddd;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.menu-button {
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background-color: #0056b3;
+}
+
+.custom-menu {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.menu-item {
+  color: #333;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.menu-item:hover {
+  background-color: #f5f5f5;
+}
+
+
+.modal-content {
+  background-color: #fff; /* Set background color for the modal content */
+  border-radius: 10px; /* Add border-radius for rounded corners */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add box shadow for depth effect */
+}
+
+.modal-body {
+  padding: 20px; /* Add padding to the modal body */
+}
+
+/* Optional: Customize modal header and footer if needed */
+.modal-header {
+  background-color: #007bff; /* Change to your desired header background color */
+  color: #fff; /* Change to your desired text color */
+  border-radius: 10px 10px 0 0; /* Add border-radius only to the top */
+}
+
+.modal-footer {
+  background-color: #f8f9fa; /* Change to your desired footer background color */
+  border-radius: 0 0 10px 10px; /* Add border-radius only to the bottom */
+}
+
+/* Optional: Customize modal title */
+.modal-title {
+  font-weight: bold; /* Add bold font weight to the modal title */
+}
+
+
+

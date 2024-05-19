@@ -1,0 +1,106 @@
+/* CSS */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .left-controls {
+    flex: 0.5; /* Take up remaining space */
+    display: flex;
+    align-content: left;
+    margin-left: 0px;
+  }
+  
+  .center-controls {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    align-items: center;
+    justify-self: center;
+  }
+  .label {
+    font-weight: bold;
+    margin-right: 10px;
+
+  }
+  
+  .radio-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .radio-label {
+    margin-right: 30px;
+    margin-left:20px
+  }
+  
+  input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #2196F3; /* Blue color */
+    outline: none;
+    cursor: pointer;
+  }
+  
+  input[type="radio"]:checked {
+    background-color: #2196F3; /* Blue color */
+  }
+  .dropdown-input {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .dropdown {
+    margin-left: 20px; /* Adjust margin as needed */
+  }
+  
+  /* .dropdown-input {
+    width: 200px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  } */
+  
+  .dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: calc(100% - 2px); /* Adjusting the width to match the input's width */
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  .dropdown-list li {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .dropdown-list li:hover {
+    background-color: #f2f2f2;
+  }
+  

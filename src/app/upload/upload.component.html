@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <label class="upload-type-label">Upload Type:</label>
+    <div class="radio-group">
+      <label class="radio-label">
+        <input type="radio" name="uploadtype" value="GUI" [(ngModel)]="uploadData.uploadType">
+        <span>GUI</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="uploadtype" value="Robotics" [(ngModel)]="uploadData.uploadType">
+        <span>Robotics</span>
+      </label>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="dropdown">
+        <label for="searchInput" style="font-weight: bold;">Project Name:</label>
+        <input id="searchInput" type="text" class="dropdown-input" placeholder="Search..." (input)="filterItems($event)" style="width: 520px;" [(ngModel)]="uploadData.projectName">
+        <ul class="dropdown-list" *ngIf="dropdownVisible">
+            <li *ngFor="let item of filteredItems" (click)="selectItem(item);" [value]="item.Project_ID">{{ item.Project_Name }}</li>
+        </ul>
+    </div>
+        
+    </div>
+    <div class="col">
+      <label for="versionno" style="font-weight: bold;">Version No:</label>
+      <input type="text" id="versionno" name="versionno" class="form-control" [(ngModel)]="uploadData.verionNo" required>
+      <!-- <label for="releaseby" style="font-weight: bold;">Release By:</label>
+      <input type="text" id="releaseby" name="releaseby" class="form-control" [(ngModel)]="uploadData.releaseBy" required> -->
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col">
+    <label for="dateofreleasse" style="font-weight: bold;">Date Of Release</label>
+    <input id="dateofreleasse" name="dateofreleasse" type="date" class="form-control" style="width:400px" [(ngModel)]="uploadData.dateOfReleasse" required>
+    </div>
+    <div class="col">
+      <label for="releasecontent" style="font-weight: bold;">Release Content:</label>
+      <textarea type="text" id="releasecontent" name="releasecontent" class="form-control" [(ngModel)]="uploadData.releaseContent" required></textarea>
+    </div>
+  </div>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">File Upload</h5>
+    </div>
+    <div class="card-body" >
+        <input type="file" name="uploadfile" class="form-control-file" file-model="file" (change)="this.onFilechange($event)"  />
+        <button name="uploadbutton" class="button-19" (click)="upload()">Upload</button>
+    </div>
+    <div class="alert" style="color: red;">{{ errorMessage }}</div>
+
+  </div>
+
+

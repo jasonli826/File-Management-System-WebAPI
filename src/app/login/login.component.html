@@ -1,0 +1,28 @@
+<div class="col-md-6 offset-md-3 mt-5">
+    <div class="card">
+        <h4 class="card-header">Login Page</h4>
+        <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && loginForm.controls['username'].errors }" />
+                    <div *ngIf="submitted && loginForm.controls['username'].errors" class="invalid-feedback">
+                        <div *ngIf="loginForm.controls['username'].errors['required']">Username is required</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && loginForm.controls['password'].errors }" />
+                    <div *ngIf="submitted && loginForm.controls['password'].errors" class="invalid-feedback">
+                        <div *ngIf="loginForm.controls['password'].errors['required']">Password is required</div>
+                    </div>
+                </div>
+                <button  #LoginButton  [disabled]="loading" class="button-19">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                    Login
+                </button>
+                <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+            </form>
+        </div>
+    </div>
+</div>

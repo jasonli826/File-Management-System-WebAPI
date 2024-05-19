@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using FileDetailAPI.Models;
 
 namespace FileDetailAPI.Repository
@@ -23,6 +23,8 @@ namespace FileDetailAPI.Repository
         public DbSet<UserRole> UserRole { get; set; }
 
         public DbSet<Project> Project { get; set; }
+
+        public DbSet<Audit_Log> Audit_Log { get; set; }
 
     }
 }
