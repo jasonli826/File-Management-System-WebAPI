@@ -36,6 +36,7 @@ namespace FileDetailAPI
             services.AddScoped<IUserRepository, UserRepository>(); 
             services.AddScoped<ILoginRepository, LoginRepository>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<IDashboardRepository, DashboardRepository>();
             var connectionString = Configuration.GetConnectionString("FileDetailAppCon");
             services.AddDbContext<APIDbContext>(options => options.UseSqlServer(connectionString));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

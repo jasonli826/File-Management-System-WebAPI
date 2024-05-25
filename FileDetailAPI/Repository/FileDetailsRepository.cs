@@ -236,7 +236,7 @@ namespace FileDetailAPI.Repository
                                                 UploadDateTime = fd.UploadDateTime,
                                                 ProjectName = fd.Project_Name
 
-                                            }).Where(x => (x.FileType ?? "").Contains(fileType) && (x.ProjectName ?? "").Contains(projectName)).AsQueryable().OrderByDescending(x => x.UploadDateTime).ToListAsync();
+                                            }).Where(x => x.FileType== fileType && x.ProjectName==projectName).OrderByDescending(x => x.UploadDateTime).Take(5).ToListAsync();
                 }
             }
             catch (Exception ex)

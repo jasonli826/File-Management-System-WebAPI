@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace FileDetailAPI.Models
@@ -25,7 +25,7 @@ namespace FileDetailAPI.Models
 
         public DateTime? Last_Login_Date { get; set; }
 
-        public DateTime Logout_Date { get; set; }
+        public DateTime? Logout_Date { get; set; }
 
         public int Loggedin { get; set; }
 

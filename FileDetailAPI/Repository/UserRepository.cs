@@ -1,4 +1,4 @@
-﻿using FileDetailAPI.Models;
+using FileDetailAPI.Models;
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -86,7 +86,7 @@ namespace FileDetailAPI.Repository
                 {
 
                     userList = await (from user in _appDBContext.User_tbl
-                                      join role in _appDBContext.UserRole on user.UserId equals role.UserId
+                                     //join role in _appDBContext.UserRole on user.UserId equals role.UserId
                                       where ((user.UserId.ToUpper() ?? "").Contains(userId.ToUpper()) &&(user.UserName.ToUpper() ?? "").Contains(userName.ToUpper()) && (user.Remarks.ToUpper() ?? "").Contains(remark.ToUpper()))
                                       select new User_DTO
                                       {

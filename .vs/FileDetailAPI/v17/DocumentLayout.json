@@ -3,28 +3,60 @@
   "WorkspaceRootPath": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\repository\\filedetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\repository\\filedetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\models\\audit_log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\models\\audit_log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\models\\project_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\models\\project_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\controllers\\filedetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\controllers\\filedetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\repository\\apidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\repository\\apidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\filedetailapi\\repository\\dashboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\repository\\dashboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\filedetailapi\\models\\populardownloadfiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\models\\populardownloadfiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\filedetailapi\\repository\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\repository\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\filedetailapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\filedetailapi\\repository\\filedetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\repository\\filedetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\filedetailapi\\controllers\\rolecontrolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\controllers\\rolecontrolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\filedetailapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\filedetailapi\\repository\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\repository\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\filedetailapi\\repository\\rolecontrolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\repository\\rolecontrolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\filedetailapi\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\filedetailapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\filedetailapi\\repository\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\repository\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,85 +66,185 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Project_DTO.cs",
-              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\Project_DTO.cs",
-              "RelativeDocumentMoniker": "FileDetailAPI\\Models\\Project_DTO.cs",
-              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\Project_DTO.cs",
-              "RelativeToolTip": "FileDetailAPI\\Models\\Project_DTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T13:14:07.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "APIDbContext.cs",
-              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\APIDbContext.cs",
-              "RelativeDocumentMoniker": "FileDetailAPI\\Repository\\APIDbContext.cs",
-              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\APIDbContext.cs",
-              "RelativeToolTip": "FileDetailAPI\\Repository\\APIDbContext.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAA7wBsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T12:29:05.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FileDetailsRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\FileDetailsRepository.cs",
-              "RelativeDocumentMoniker": "FileDetailAPI\\Repository\\FileDetailsRepository.cs",
-              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\FileDetailsRepository.cs",
-              "RelativeToolTip": "FileDetailAPI\\Repository\\FileDetailsRepository.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAWwGMAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T12:28:23.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Project.cs",
-              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\Project.cs",
-              "RelativeDocumentMoniker": "FileDetailAPI\\Models\\Project.cs",
-              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\Project.cs",
-              "RelativeToolTip": "FileDetailAPI\\Models\\Project.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAQwAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T12:27:26.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Audit_Log.cs",
-              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\Audit_Log.cs",
-              "RelativeDocumentMoniker": "FileDetailAPI\\Models\\Audit_Log.cs",
-              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\Audit_Log.cs",
-              "RelativeToolTip": "FileDetailAPI\\Models\\Audit_Log.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAA3wA8AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T12:25:55.665Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "FileDetailController.cs",
               "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\FileDetailController.cs",
               "RelativeDocumentMoniker": "FileDetailAPI\\Controllers\\FileDetailController.cs",
               "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\FileDetailController.cs",
               "RelativeToolTip": "FileDetailAPI\\Controllers\\FileDetailController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAhwCkAAAAMAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAtwD8AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T09:05:54.742Z",
+              "WhenOpened": "2024-05-25T11:49:18.64Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "FileDetailAPI\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAApwBgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:06:12.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DashboardRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\DashboardRepository.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Repository\\DashboardRepository.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\DashboardRepository.cs",
+              "RelativeToolTip": "FileDetailAPI\\Repository\\DashboardRepository.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAApwA0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T04:46:22.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "FileDetailAPI\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAApwCwAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:05:41.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PopularDownloadFiles.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\PopularDownloadFiles.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Models\\PopularDownloadFiles.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\PopularDownloadFiles.cs",
+              "RelativeToolTip": "FileDetailAPI\\Models\\PopularDownloadFiles.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA3wAkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T08:30:41.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\LoginRepository.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Repository\\LoginRepository.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\LoginRepository.cs",
+              "RelativeToolTip": "FileDetailAPI\\Repository\\LoginRepository.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAtwB4AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:11:16.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FileDetailsRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\FileDetailsRepository.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Repository\\FileDetailsRepository.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\FileDetailsRepository.cs",
+              "RelativeToolTip": "FileDetailAPI\\Repository\\FileDetailsRepository.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:11:16.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RoleControlController.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\RoleControlController.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Controllers\\RoleControlController.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\RoleControlController.cs",
+              "RelativeToolTip": "FileDetailAPI\\Controllers\\RoleControlController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:26:49.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProjectRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\ProjectRepository.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Repository\\ProjectRepository.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\ProjectRepository.cs",
+              "RelativeToolTip": "FileDetailAPI\\Repository\\ProjectRepository.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:11:16.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "FileDetailAPI\\Controllers\\UserController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:11:16.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RoleControlRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\RoleControlRepository.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Repository\\RoleControlRepository.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\RoleControlRepository.cs",
+              "RelativeToolTip": "FileDetailAPI\\Repository\\RoleControlRepository.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAAAsAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T06:16:46.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Controllers\\ProjectController.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "FileDetailAPI\\Controllers\\ProjectController.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAA8wC0AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:11:16.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Startup.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Startup.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Startup.cs",
+              "RelativeToolTip": "FileDetailAPI\\Startup.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAAAHkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T05:10:06.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RoleRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\RoleRepository.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Repository\\RoleRepository.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\RoleRepository.cs",
+              "RelativeToolTip": "FileDetailAPI\\Repository\\RoleRepository.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T04:49:21.086Z"
             }
           ]
         }

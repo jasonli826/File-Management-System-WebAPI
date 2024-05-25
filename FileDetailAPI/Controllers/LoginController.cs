@@ -1,4 +1,4 @@
-﻿using FileDetailAPI.Repository;
+using FileDetailAPI.Repository;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using System;
@@ -37,7 +37,7 @@ namespace FileDetailAPI.Controllers
             }
             catch (Exception ex)
             {
-                return new JsonResult(ex.Message);
+                return new JsonResult("Exception:"+ex.Message);
             }
         }
     }

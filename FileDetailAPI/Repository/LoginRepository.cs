@@ -1,4 +1,4 @@
-﻿using FileDetailAPI.Models;
+using FileDetailAPI.Models;
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -32,7 +32,7 @@ namespace FileDetailAPI.Repository
 
                 if (_appDBContext.User_tbl.Where(x => x.UserId == userId && x.Password == encryption ).Count() > 0)
                 {
-                    var singleuser = await _appDBContext.User_tbl.Where(x => x.UserId == userId && x.Password == encryption).FirstOrDefaultAsync();
+                    var singleuser = await _appDBContext.User_tbl.Where(x => x.UserId.ToLower() == userId.ToLower() && x.Password == encryption).FirstOrDefaultAsync();
                     if (singleuser != null)
                     {
                         if (singleuser.Status.ToUpper() == "INACTIVE")
@@ -42,7 +42,9 @@ namespace FileDetailAPI.Repository
                         }
 
 
+                        singleuser.Last_Login_Date = DateTime.Now;
 
+                        await _appDBContext.SaveChangesAsync();
 
                     }
                     var tempList = await (from user in _appDBContext.User_tbl
