@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\repository\\filedetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\repository\\filedetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\repository\\apidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\repository\\apidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "APIDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\APIDbContext.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Repository\\APIDbContext.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\APIDbContext.cs",
+              "RelativeToolTip": "FileDetailAPI\\Repository\\APIDbContext.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAlwAwAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T03:49:13.515Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "FileDetailAPI\\Repository\\FileDetailsRepository.cs",
               "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\FileDetailsRepository.cs",
               "RelativeToolTip": "FileDetailAPI\\Repository\\FileDetailsRepository.cs",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAIwF4AAAAlAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAiwEYAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T09:24:32.338Z",
               "EditorCaption": ""

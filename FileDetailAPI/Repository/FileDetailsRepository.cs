@@ -38,24 +38,40 @@ namespace FileDetailAPI.Repository
            List<FileDetails_DTO> fileList = null;
             try
             {
-                 fileList = await (from fd in _appDBContext.FileDetails
+
+        //var fileDetails = await _appDBContext.FileDetails.FromSqlRaw("GetFileList").ToListAsync();
+
+        //fileList =  fileDetails.Select(fd => new FileDetails_DTO
+        //{
+        //  Id = fd.Id,
+        //  FileName = fd.FileName,
+        //  FileSize = fd.FileSize,
+        //  FileType = fd.FileType,
+        //  VersionNo = fd.VersionNo,
+        //  UploadBy = fd.UploadBy,
+        //  ReleaseDate = fd.ReleaseDate.Date,
+        //  ReleaseNotes = fd.ReleaseNotes,
+        //  UploadDateTime = fd.UploadDateTime,
+        //  ProjectName = fd.Project_Name
+        //}).OrderByDescending(x => x.UploadDateTime).ToList();
+        fileList = await (from fd in _appDBContext.FileDetails
 
 
-                                      select new FileDetails_DTO
-                                      {
-                                          Id = fd.Id,
-                                          FileName = fd.FileName,
-                                          FileSize = fd.FileSize,
-                                          FileType = fd.FileType,
-                                          VersionNo = fd.VersionNo,
-                                          UploadBy = fd.UploadBy,
-                                          ReleaseDate = fd.ReleaseDate.Date,
-                                          ReleaseNotes = fd.ReleaseNotes,
-                                          UploadDateTime = fd.UploadDateTime,
-                                          ProjectName = fd.Project_Name
+                          select new FileDetails_DTO
+                          {
+                            Id = fd.Id,
+                            FileName = fd.FileName,
+                            FileSize = fd.FileSize,
+                            FileType = fd.FileType,
+                            VersionNo = fd.VersionNo,
+                            UploadBy = fd.UploadBy,
+                            ReleaseDate = fd.ReleaseDate.Date,
+                            ReleaseNotes = fd.ReleaseNotes,
+                            UploadDateTime = fd.UploadDateTime,
+                            ProjectName = fd.Project_Name
 
-                                      }).AsQueryable().OrderByDescending(x => x.UploadDateTime).ToListAsync();
-            }
+                          }).AsQueryable().OrderByDescending(x => x.UploadDateTime).ToListAsync();
+      }
             catch (Exception ex)
             {
                 throw ex;
@@ -117,6 +133,7 @@ namespace FileDetailAPI.Repository
             try
             {
                 var result = _appDBContext.FileDetails.AsNoTracking().ToList().Where(x=>x.Id==Id).FirstOrDefault();
+                //var result=(await _appDBContext.FileDetails.FromSqlRaw<FileDetails>("GetFileById @Id", new SqlParameter("@Id", Id)).ToListAsync()).FirstOrDefault();
                 result.FileData = DecompressData(result.FileData);
                 file = result;
                 Audit_Log auditLog = new Audit_Log();
