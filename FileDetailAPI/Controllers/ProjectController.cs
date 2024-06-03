@@ -1,8 +1,9 @@
-﻿using FileDetailAPI.Models;
+using FileDetailAPI.Models;
 using FileDetailAPI.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
@@ -12,25 +13,51 @@ namespace FileDetailAPI.Controllers
     [ApiController]
     public class ProjectController : Controller
     {
-        private readonly IProjectRepository _project;
+      private readonly ILogger<ProjectController> _logger;
+      private readonly IProjectRepository _project;
 
-        public ProjectController(IProjectRepository project)
+        public ProjectController(ILogger<ProjectController> logger, IProjectRepository project)
         {
+            _logger = logger; 
             _project = project ?? throw new ArgumentNullException(nameof(project));
         }
         [HttpGet]
         [Route("GetProjectList")]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _project.GetProjectList());
-        }
+            try
+            {
+              _logger.LogInformation("Starting to GetProjectList");
+              var projectList = await _project.GetProjectList();
+              _logger.LogInformation("Ending to GetProjectList");
+              return Ok(projectList);
+            }
+            catch (Exception ex)
+            {
+              _logger.LogError($"Error occurred: {ex.Message}");
+              _logger.LogError($"Stack Trace: {ex.StackTrace}");
+              throw;
+            }
+    }
 
         [HttpGet]
         [Route("SearchProject")]
         public async Task<IActionResult> Get([FromQuery] Project_DTO project_dto)
         {
-            return Ok(await _project.SearchProjectList(project_dto));
-        }
+          try
+          {
+             _logger.LogInformation("Starting to GetProjectList");
+              var projectList = await _project.SearchProjectList(project_dto);
+             _logger.LogInformation("Ending to GetProjectList");
+            return Ok(projectList);
+          }
+          catch (Exception ex)
+          {
+            _logger.LogError($"Error occurred: {ex.Message}");
+            _logger.LogError($"Stack Trace: {ex.StackTrace}");
+            throw;
+          }
+    }
 
         [HttpPost]
         [Route("AddProject")]
@@ -38,13 +65,15 @@ namespace FileDetailAPI.Controllers
         {
             try
             {
+
                 if (string.IsNullOrEmpty(project_dto.Project_Name))
                 {
                     return StatusCode(StatusCodes.Status400BadRequest, "Project Name is duplicated");
                 }
-
-                var result = await _project.InsertProject(project_dto);
-                if (result.Project_ID == 0)
+              _logger.LogInformation("Starting to AddProject");
+              var result = await _project.InsertProject(project_dto);
+              _logger.LogInformation("Ending to AddProject");
+              if (result.Project_ID == 0)
                 {
                     return StatusCode(StatusCodes.Status500InternalServerError, "Project Name is duplicated");
                 }
@@ -54,7 +83,10 @@ namespace FileDetailAPI.Controllers
             }
             catch (Exception ex)
             {
-                return new JsonResult(ex.Message);
+              _logger.LogError($"Error occurred: {ex.Message}");
+              _logger.LogError($"Stack Trace: {ex.StackTrace}");
+              throw;
+              //return new JsonResult(ex.Message);
             }
         }
 
@@ -64,12 +96,17 @@ namespace FileDetailAPI.Controllers
         {
             try
             {
+                _logger.LogInformation("Starting to UpdateProject");
                 await _project.UpdateProject(project_dto);
+                _logger.LogInformation("Ending to UpdateProject");
                 return new JsonResult("Updated Project Successfully");
             }
             catch (Exception ex)
             {
-                return new JsonResult(ex.Message);
+              _logger.LogError($"Error occurred: {ex.Message}");
+              _logger.LogError($"Stack Trace: {ex.StackTrace}");
+              throw;
+             // return new JsonResult(ex.Message);
             }
         }
     }

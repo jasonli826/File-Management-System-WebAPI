@@ -92,7 +92,7 @@ namespace FileDetailAPI.Repository
                 auditLog.UserId = uploadData.releaseBy;
                 auditLog.ActionType = 2;
                 auditLog.FileName = file.FileName;
-                auditLog.LogMessage = "User:" + uploadData.releaseBy + " has uploaded the file " + file.FileName + " on " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+                auditLog.LogMessage = uploadData.releaseBy + " has uploaded the file " + file.FileName + " on " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
                 auditLog.Created_by = uploadData.releaseBy;
                 auditLog.Created_Date = DateTime.Now;
                 auditLog.Updated_by = uploadData.releaseBy;

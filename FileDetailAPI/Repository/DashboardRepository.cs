@@ -34,7 +34,7 @@ namespace FileDetailAPI.Repository
         numberOfFiles.totalNumberOfUploadFiles =  _appDBContext.Audit_Log.Where(x => x.ActionType == 2).Count();
         total = numberOfFiles.totalNumberOfUploadFiles;
         lastWeek =  _appDBContext.Audit_Log.Where(x => x.ActionType == 2 && x.Created_Date >= DateTime.Today.AddDays(-7) && x.Created_Date <= DateTime.Now).Count();
-        numberOfFiles.uploadFilePercentage = lastWeek / total*100;
+        numberOfFiles.uploadFilePercentage = Math.Round( lastWeek / total*100,2);
         numberOfFiles.numberOfUsers =  _appDBContext.User_tbl.Count();
         numberOfFiles.numberOfNewUsers =  _appDBContext.User_tbl.Where(x => x.Created_Date >= DateTime.Today.AddDays(-7) && x.Created_Date <= DateTime.Now).Count();
         numberOfFiles.totalNumberOfProjects =  _appDBContext.Project.Count();
@@ -73,7 +73,9 @@ namespace FileDetailAPI.Repository
       int i = 0;
       foreach (var file in PopularDownloadFiles)
       {
-        file.percentage = (file.NumberOfDownloadTimes / totalDownlodFiles) * 100;
+        file.percentage = Math.Round(((double)file.NumberOfDownloadTimes / (double)totalDownlodFiles), 2);
+        file.percentage = Convert.ToDouble(String.Format("{0:0.00}", file.percentage));
+        file.percentage = Math.Round(file.percentage * 100,2);
         if (i == 0)
         {
           file.color = "bg-orange-500 h-full";

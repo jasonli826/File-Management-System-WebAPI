@@ -18,6 +18,19 @@
         "FileDetailAppCon": "Data Source=Localhost;database=FileVersionManagement;uid=sa;password=P@ssw0rd;"
 
       },
+      "Logging": {
+        "LogLevel": {
+          "Default": "Information",
+          "Microsoft": "Warning",
+          "Microsoft.Hosting.Lifetime": "Information"
+        },
+        "File": {
+          "Path": "Logs/log.txt",
+          "LogLevel": {
+            "Default": "Information"
+          }
+        }
+      },
       "applicationUrl": "http://localhost:53535"
     },
     "Docker": {

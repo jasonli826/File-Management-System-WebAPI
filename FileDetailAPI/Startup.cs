@@ -13,6 +13,10 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
 using System;
+using Microsoft.Extensions.Logging;
+using FileDetailAPI.LoggerManager;
+using Serilog;
+using FileDetailAPI.Middleware;
 
 
 namespace FileDetailAPI
@@ -40,6 +44,7 @@ namespace FileDetailAPI
             var connectionString = Configuration.GetConnectionString("FileDetailAppCon");
             services.AddDbContext<APIDbContext>(options => options.UseSqlServer(connectionString));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<LoggerManager.ILoggerManager, LoggerManager.LoggerManager>();
             services.Configure<FormOptions>(options =>
             {
                 options.MultipartBodyLengthLimit = 2147483648; // 2GB
@@ -88,19 +93,19 @@ namespace FileDetailAPI
             }
           
 
-            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-
-            app.UseHttpsRedirection();
+              app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+              app.UseMiddleware<ExceptionMiddleware>();
+              app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
-
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-
+      
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
@@ -108,14 +113,14 @@ namespace FileDetailAPI
                 c.DocumentTitle = "WEB API";
                 c.DocExpansion(DocExpansion.List);
             });
+      //app.UseSerilogRequestLogging();
+      //app.UseStaticFiles(new StaticFileOptions
+      //{
+      //    FileProvider = new PhysicalFileProvider(
+      //        Path.Combine(Directory.GetCurrentDirectory(), "Photos")),
+      //    RequestPath = "/Photos"
+      //});
 
-            //app.UseStaticFiles(new StaticFileOptions
-            //{
-            //    FileProvider = new PhysicalFileProvider(
-            //        Path.Combine(Directory.GetCurrentDirectory(), "Photos")),
-            //    RequestPath = "/Photos"
-            //});
-
-        }
+    }
     }
 }
