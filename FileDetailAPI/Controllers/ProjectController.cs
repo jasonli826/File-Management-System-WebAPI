@@ -99,7 +99,7 @@ namespace FileDetailAPI.Controllers
                 _logger.LogInformation("Starting to UpdateProject");
                 await _project.UpdateProject(project_dto);
                 _logger.LogInformation("Ending to UpdateProject");
-                return new JsonResult("Updated Project Successfully");
+                return new JsonResult("The project has been updated successfully");
             }
             catch (Exception ex)
             {

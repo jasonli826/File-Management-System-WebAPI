@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\models\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\models\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\models\\loginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\models\\loginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\models\\user_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\models\\user_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|d:\\projects\\file management system\\webapi\\file-management-system-webapi\\filedetailapi\\repository\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF7E65DF-81E8-4FDA-8B97-A21A55D3F99A}|FileDetailAPI\\FileDetailAPI.csproj|solutionrelative:filedetailapi\\repository\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "FileDetailAPI\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAADgvxwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T02:35:03.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginUser.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\LoginUser.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Models\\LoginUser.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\LoginUser.cs",
+              "RelativeToolTip": "FileDetailAPI\\Models\\LoginUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T02:35:27.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User_DTO.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\User_DTO.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Models\\User_DTO.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\User_DTO.cs",
+              "RelativeToolTip": "FileDetailAPI\\Models\\User_DTO.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T02:33:00.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChangePassword.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\ChangePassword.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Models\\ChangePassword.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Models\\ChangePassword.cs",
+              "RelativeToolTip": "FileDetailAPI\\Models\\ChangePassword.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAADwvwcAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T02:32:55.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "FileDetailAPI\\appsettings.json",
-              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\appsettings.json",
-              "RelativeToolTip": "FileDetailAPI\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-03T09:27:43.232Z",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "FileDetailAPI\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAArwIQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T02:30:53.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Repository\\UserRepository.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "FileDetailAPI\\Repository\\UserRepository.cs",
+              "ViewState": "AQIAAO4AAAAAAAAAAAAEwPQAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T02:24:53.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\LoginRepository.cs",
+              "RelativeDocumentMoniker": "FileDetailAPI\\Repository\\LoginRepository.cs",
+              "ToolTip": "D:\\Projects\\File Management System\\WebAPI\\File-Management-System-WebAPI\\FileDetailAPI\\Repository\\LoginRepository.cs",
+              "RelativeToolTip": "FileDetailAPI\\Repository\\LoginRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T02:24:08.165Z",
               "EditorCaption": ""
             }
           ]

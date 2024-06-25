@@ -19,6 +19,7 @@ namespace FileDetailAPI.Repository
         Task<User_tbl> GetUserByID(string userId);
         Task<User_tbl> InsertUser(User_DTO user_dto);
         Task<User_tbl> UpdateUser(User_DTO user_dto );
+        Task<User_tbl> ChangePassword(string userId, string newPassword);
 
         Task<IEnumerable<User_DTO>> SearchUsers(User_DTO user_dto);
     }
@@ -224,13 +225,41 @@ namespace FileDetailAPI.Repository
             }
             catch (Exception ex)
             {
-                return null;
+                  throw ex;
             }
             return user;
 
 
         }
-       private string EncryptString(string key, string plainText)
+    public async Task<User_tbl> ChangePassword(string userId, string newPassword)
+    {
+      User_tbl user = null;
+      string encrptionStr = string.Empty;
+      try
+      {
+        user = await _appDBContext.User_tbl.Where(x => x.UserId == userId).FirstOrDefaultAsync();
+        if (!string.IsNullOrEmpty(newPassword))
+        {
+          encrptionStr = EncryptString(key, newPassword);
+
+          user.Password = encrptionStr;
+        }
+
+        user.Updated_by = userId;
+        user.Updated_Date = DateTime.Now;
+        _appDBContext.Entry(user).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+
+        await _appDBContext.SaveChangesAsync();
+
+      }
+      catch (Exception ex)
+      {
+
+        throw ex;
+      }
+      return user;
+    }
+    private string EncryptString(string key, string plainText)
         {
             byte[] iv = new byte[16];
             byte[] array = null;
@@ -289,5 +318,7 @@ namespace FileDetailAPI.Repository
                 }
             }
         }
-    }
+
+
+  }
 }

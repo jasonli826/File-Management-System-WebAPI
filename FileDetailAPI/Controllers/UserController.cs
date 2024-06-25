@@ -105,9 +105,9 @@ namespace FileDetailAPI.Controllers
                 var result = await _user.UpdateUser(user_dto);
                 _logger.LogInformation("Ending to UpdateUser");
                 if (result != null)
-                    return new JsonResult("Updated User Successfully");
+                    return new JsonResult("The user has been updated successfully");
                 else
-                    return new JsonResult("Updated User Failed");
+                    return new JsonResult("The user has been updated failed");
             }
             catch (Exception ex)
             {
@@ -117,5 +117,34 @@ namespace FileDetailAPI.Controllers
         
             }
         }
+    [HttpPut]
+    [Route("ChangePassword")]
+    public async Task<IActionResult> ChangePassword(ChangePassword changePassword)
+    {
+      byte[] data = null;
+      string decodedString = string.Empty;
+      try
+      {
+        if (!string.IsNullOrEmpty(changePassword.newPassword))
+        {
+          data = Convert.FromBase64String(changePassword.newPassword);
+          decodedString = System.Text.Encoding.UTF8.GetString(data);
+        }
+        _logger.LogInformation("Starting to Chane Password");
+        var result = await _user.ChangePassword(changePassword.userId, decodedString);
+        _logger.LogInformation("Ending to Change Password");
+        if (result != null)
+          return new JsonResult("The user has changed password successfully");
+        else
+          return new JsonResult("The user has changed password failed");
+      }
+      catch (Exception ex)
+      {
+        _logger.LogError($"Error occurred: {ex.Message}");
+        _logger.LogError($"Stack Trace: {ex.StackTrace}");
+        throw;
+
+      }
     }
+  }
 }

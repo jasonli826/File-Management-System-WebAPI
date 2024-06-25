@@ -1,4 +1,4 @@
-﻿using FileDetailAPI.Models;
+using FileDetailAPI.Models;
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -44,9 +44,9 @@ namespace FileDetailAPI.Repository
             }
             else
             {
-                role.Created_by = "Administrator";
+                role.Created_by = role.Created_by;
                 role.Created_Date = DateTime.Now;
-                role.Updated_by = "Administrator";
+                role.Updated_by = role.Created_by;
                 role.Updated_Date = DateTime.Now;
                 _appDBContext.Role.Add(role);
                 await _appDBContext.SaveChangesAsync();
@@ -57,7 +57,11 @@ namespace FileDetailAPI.Repository
 
         public async Task<Role> UpdateRole(Role role)
         {
-            _appDBContext.Entry(role).State = EntityState.Modified;
+            var singleRole = await _appDBContext.Role.Where(x => x.RoleID == role.RoleID).FirstOrDefaultAsync();
+            singleRole.Role_Name = role.Role_Name;
+            singleRole.Description = role.Description;
+            singleRole.Updated_by = role.Updated_by;
+            singleRole.Updated_Date = DateTime.Now;
             await _appDBContext.SaveChangesAsync();
             return role; 
         }
